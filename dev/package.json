@@ -1,0 +1,17 @@
+{
+  "name": "enclave-dev",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "seed": "node --env-file-if-exists=.secrets seed.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "matrix-js-sdk": "^41.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.2",
+    "typescript": "~6.0.2"
+  }
+}

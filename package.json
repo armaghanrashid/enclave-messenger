@@ -1,0 +1,27 @@
+{
+  "name": "enclave-messenger",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "workspaces": [
+    "client",
+    "gatekeeper",
+    "dev"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev:synapse": "bash dev/start.sh",
+    "dev:gatekeeper": "npm run dev -w gatekeeper",
+    "dev:client": "npm run dev -w client",
+    "seed": "npm run seed -w dev",
+    "lint": "oxlint client/src gatekeeper/src dev/seed.ts",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "test": "npm test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present"
+  },
+  "devDependencies": {
+    "oxlint": "^1.87.0"
+  }
+}

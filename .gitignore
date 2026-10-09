@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# local development state
+dev/.venv/
+dev/.secrets
+dev/data/
+gatekeeper/data/
+*.db
+*.db-shm
+*.db-wal
+
+.DS_Store
